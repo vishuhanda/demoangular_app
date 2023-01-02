@@ -10,7 +10,9 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Build the angularapp Docker image
-      run: |
-        docker login ghcr.io -u vishuhanda -p ${{ secrets.GITHUB_TOKEN }}
-        docker build -t ghcr.io/vishuhanda/githubangular:1.1 . 
-        docker push ghcr.io/vishuhanda/githubangular:1.1
+    - uses: mr-smithers-excellent/docker-build-push@v5
+      with:
+        image: demoangularapp
+        registry: ghcr.io
+        username: vishuhanda
+        password: ${{ secrets.GITHUB_TOKEN }}
