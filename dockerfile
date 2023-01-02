@@ -1,4 +1,5 @@
 FROM node:latest as node
+LABEL org.opencontainers.image.source="https://github.com/vishuhanda/demoangular_app"
 WORKDIR /angularapp
 COPY . .
 RUN npm install
