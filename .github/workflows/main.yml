@@ -11,6 +11,6 @@ jobs:
 
     - name: Build the angularapp Docker image
       run: |
-        echo $CR_PAT | docker login ghcr.io -u itsvishuhanda --password-stdin
+        echo $CR_PAT | docker login ghcr.io -u vishuhanda --password-stdin
       env:
         CR_PAT: ${{ secrets.CR_PAT }}
