@@ -12,5 +12,5 @@ jobs:
     - name: Build the angularapp Docker image
       run: |
         docker login ghcr.io -u vishuhanda -p ${{ secrets.GITHUB_TOKEN }}
-      env:
-        CR_PAT: ${{ secrets.CR_PAT }}
+        docker build -t ghcr.io/vishuhanda/githubangular:1.0 . 
+        docker push ghcr.io/vishuhanda/githubangular:1.0
