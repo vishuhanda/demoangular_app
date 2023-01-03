@@ -19,4 +19,4 @@ jobs:
         env : 
           NOWGREETING :  $ {{ GITHUB_EVENT_NAME }}  
         run : |
-          echo $GITHUB_EVENT_NAME
+          echo this is how to access env vars $GITHUB_EVENT_NAME and $ {{env.first_step.GREETING}} 

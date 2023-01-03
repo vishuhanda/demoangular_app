@@ -1,6 +1,6 @@
 name: publish
 
-on: []
+on: [pull_request]
 
 jobs:
   publish-hello-world-image:
