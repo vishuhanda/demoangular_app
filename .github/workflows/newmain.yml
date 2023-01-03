@@ -1,10 +1,10 @@
-name: publish
+name: Jobs for practice
 
 on: [push]
 
 
 jobs:
-    my first job:
+    my_first_job:
       runs-on: ubuntu-latest
       steps:
       - name: first step
