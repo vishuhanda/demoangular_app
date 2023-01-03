@@ -14,3 +14,9 @@ jobs:
         run : |
           echo $GREETING
 
+      - name: seconds step
+        id : second_step
+        env : 
+          NOWGREETING :  $ {{ GITHUB_EVENT_NAME }}  
+        run : |
+          echo $NOWGREETING
