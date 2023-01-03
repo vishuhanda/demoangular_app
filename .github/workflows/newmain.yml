@@ -24,6 +24,7 @@ jobs:
           echo this is how to access env vars $GITHUB_EVENT_NAME and
            ${{ env.CHKTHIS }} and  ${{ env.NOWGREETING }} and 
            ok $env.NOWGREETING and ok second $NOWGREETING
+           
       - name : third step
         id : third_step
         run : |
