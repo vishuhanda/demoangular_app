@@ -6,6 +6,8 @@ on: [push]
 jobs:
     my_first_job:
       runs-on: ubuntu-latest
+      env:
+        CHKTHIS : THISISNEWVAL
       steps:
       - name: first step
         id : first_step
@@ -19,4 +21,4 @@ jobs:
         env : 
           NOWGREETING :  TRYTHIS  
         run : |
-          echo this is how to access env vars $GITHUB_EVENT_NAME and ${{ NOWGREETING }} 
+          echo this is how to access env vars $GITHUB_EVENT_NAME and ${{ env.CHKTHIS }} and  ${{ env.NOWGREETING }}
