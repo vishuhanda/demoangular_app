@@ -40,5 +40,6 @@ jobs:
         run : |
           echo ${{steps.fourth_step.outputs.demo_output_var_one}}
           echo ${{steps.fourth_step.outputs.demo_output_var_two}}
+          echo "branch name that triggered the workflow :- " $GITHUB_REF_NAME
     
 
