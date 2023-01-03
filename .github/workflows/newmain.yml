@@ -21,4 +21,24 @@ jobs:
         env : 
           NOWGREETING :  TRYTHIS  
         run : |
-          echo this is how to access env vars $GITHUB_EVENT_NAME and ${{ env.CHKTHIS }} and  ${{ env.NOWGREETING }} and ok $env.NOWGREETING and ok second $NOWGREETING
+          echo this is how to access env vars $GITHUB_EVENT_NAME and
+           ${{ env.CHKTHIS }} and  ${{ env.NOWGREETING }} and 
+           ok $env.NOWGREETING and ok second $NOWGREETING
+      - name : third step
+        id : third_step
+        run : |
+          echo "demo_output_var=outputvar" >> $GITHUB_OUTPUT
+
+      - name : fourth step
+        id : fourth_step
+        run : |
+          echo "demo_output_var_one=outputvar_one" >> $GITHUB_OUTPUT
+          echo "demo_output_var_two=outputvar_two" >> $GITHUB_OUTPUT
+
+      - name : fifth step
+        id : fifth_step
+        run : |
+          echo ${{steps.fourth_step.outputs.demo_output_var_one}}
+          echo ${{steps.fourth_step.outputs.demo_output_var_two}}
+    
+
