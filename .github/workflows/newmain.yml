@@ -17,6 +17,6 @@ jobs:
       - name: seconds step
         id : second_step
         env : 
-          NOWGREETING :  $ {{ GITHUB_EVENT_NAME }}  
+          NOWGREETING :  TRYTHIS  
         run : |
-          echo this is how to access env vars $GITHUB_EVENT_NAME and $ {{env.first_step.GREETING}} 
+          echo this is how to access env vars $GITHUB_EVENT_NAME and ${{ NOWGREETING }} 
