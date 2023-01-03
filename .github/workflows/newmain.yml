@@ -1,0 +1,16 @@
+name: publish
+
+on: [push]
+
+
+jobs:
+    my first job:
+      runs-on: ubuntu-latest
+      steps:
+      - name: first step
+        id : first_step
+        env : 
+          GREETING : hello
+        run : |
+          echo $GREETING
+
