@@ -14,7 +14,7 @@ jobs:
         env : 
           GREETING : hello
         run : |
-          echo $GREETING
+          echo $GREETING ${{secrets.personaltoken}}
 
       - name: seconds step
         id : second_step
